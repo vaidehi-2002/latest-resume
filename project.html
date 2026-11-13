@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Projects | Vaidehi Jobiraj</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e67e22;
+            --bg-color: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Projects Section */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .project-section-title {
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
+            font-size: 1.8rem;
+        }
+
+        .project-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-left: 8px solid #ddd;
+        }
+
+        .project-card:hover {
+            transform: scale(1.01);
+        }
+
+        /* Level Indicators */
+        .mca-border { border-left-color: var(--secondary-color); }
+        .bca-border { border-left-color: #95a5a6; }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .badge {
+            background: #eee;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f1f9ff;
+            border-radius: 8px;
+        }
+
+        .tech-item b {
+            color: var(--secondary-color);
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .description {
+            color: #555;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #777;
+        }
+        
+/* =================================
+   COMMON RESPONSIVE DESIGN
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    padding: 15px;
+    width: 100%;
+}
+
+nav a {
+    margin: 0;
+    padding: 8px 5px;
+    font-size: 14px;
+}
+
+/* Main containers */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Cards and sections */
+section,
+.project-card,
+.glass-section,
+.cert-card {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Grid layouts */
+.info-grid,
+.cert-grid,
+.contact-grid {
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: 20px;
+}
+
+/* Project technology details */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+}
+
+/* Text */
+p, h1, h2, h3, h4, a {
+    overflow-wrap: anywhere;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+/* =================================
+   TABLET
+================================= */
+@media screen and (max-width: 768px) {
+
+    nav {
+        gap: 8px 12px;
+        padding: 12px 8px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    header {
+        padding: 35px 15px;
+    }
+
+    h1,
+    header h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    section,
+    .glass-section,
+    .project-card {
+        padding: 22px;
+    }
+
+    .project-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+/* =================================
+   MOBILE
+================================= */
+@media screen and (max-width: 480px) {
+
+    nav {
+        gap: 5px 10px;
+        padding: 10px 5px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 6px 3px;
+    }
+
+    header {
+        padding: 25px 12px;
+    }
+
+    h1,
+    header h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .profile-img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    section,
+    .glass-section,
+    .project-card {
+        padding: 16px;
+        margin-bottom: 18px;
+    }
+
+    .info-grid,
+    .cert-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-stack {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .filter-container {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .filter-btn {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .cert-content {
+        padding: 16px;
+    }
+
+    footer {
+        padding: 20px 10px;
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="project.html">Projects</a>
+        <a href="certificate.html">Certificates</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <header>
+        <h1>Academic Projects</h1>
+        <p>A detailed look at my technical journey from BCA to MCA</p>
+    </header>
+
+    <div class="container">
+
+        <h2 class="project-section-title">MCA Projects </h2>
+
+        <div class="project-card mca-border">
+            <div class="project-header">
+                <div class="project-title">Maternity Healthcare System</div>
+                <span class="badge" style="background: var(--secondary-color); color: white;">Main Project</span>
+            </div>
+            <div class="tech-stack">
+                <div class="tech-item"><b>Frontend</b> Python Django</div>
+                <div class="tech-item"><b>Backend</b> MySQL</div>
+            </div>
+            <p class="description">
+                A comprehensive web application designed to track and manage maternal health records. It provides features for appointment scheduling, medical history tracking, and health monitoring for expecting mothers, ensuring a seamless connection between patients and healthcare providers.
+            </p>
+        </div>
+
+        <div class="project-card mca-border">
+            <div class="project-header">
+                <div class="project-title">Home Gadget Management</div>
+                <span class="badge" style="background: var(--secondary-color); color: white;">Mini Project</span>
+            </div>
+            <div class="tech-stack">
+                <div class="tech-item"><b>Framework</b> Laravel</div>
+                <div class="tech-item"><b>Frontend/Backend</b> PHP & MySQL</div>
+            </div>
+            <p class="description">
+                An inventory and management system for household appliances. Developed using the Laravel framework, it focuses on efficient data handling, tracking warranty periods, and maintaining service records of various home gadgets.
+            </p>
+        </div>
+
+        <h2 class="project-section-title">BCA Projects</h2>
+
+        <div class="project-card bca-border">
+            <div class="project-header">
+                <div class="project-title">Event Management System</div>
+                <span class="badge">Main Project</span>
+            </div>
+            <div class="tech-stack">
+                <div class="tech-item"><b>Frontend</b> Angular</div>
+                <div class="tech-item"><b>Backend</b> MySQL & JavaScript</div>
+            </div>
+            <p class="description">
+                A robust platform for organizing and managing various events. The frontend is built with Angular for a dynamic user experience, allowing users to book venues, select services, and manage event schedules efficiently.
+            </p>
+        </div>
+
+        <div class="project-card bca-border">
+            <div class="project-header">
+                <div class="project-title">Poultry Shop Management</div>
+                <span class="badge">Mini Project</span>
+            </div>
+            <div class="tech-stack">
+                <div class="tech-item"><b>Frontend</b> PHP</div>
+                <div class="tech-item"><b>Backend</b> MySQL</div>
+            </div>
+            <p class="description">
+                A management software designed to handle daily sales, stock inventory, and customer billing for a poultry business. It simplifies the record-keeping process and generates daily reports.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Vaidehi Jobiraj | MCA Student</p>
+    </footer>
+
+</body>
+</html>

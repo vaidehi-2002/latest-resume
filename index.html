@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vaidehi Jobiraj </title>
+
+    <style>
+
+        /* CSS VARIABLES */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        /* GENERAL STYLING */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            width: 100%;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* NAVIGATION */
+        nav {
+            width: 100%;
+            background: var(--primary-color);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* HEADER / HERO SECTION */
+        header {
+            text-align: center;
+            padding: 55px 20px;
+            background: var(--white);
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #555;
+            font-size: 1.05rem;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 950px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+
+        /* SECTIONS */
+        section {
+            width: 100%;
+            min-width: 0;
+            background: var(--white);
+            margin-bottom: 22px;
+            padding: 28px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            font-size: 1.5rem;
+        }
+
+        /* ABOUT SECTION */
+        section p {
+            overflow-wrap: anywhere;
+        }
+
+        /* EDUCATION AND PROJECT ITEMS */
+        .item {
+            margin-bottom: 22px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+            font-size: 1.15rem;
+        }
+
+        .item h4 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .date {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .completed {
+            display: inline-block;
+            color: #198754;
+            font-weight: bold;
+            font-style: normal;
+            margin-top: 5px;
+        }
+
+        /* SKILLS AND INTERESTS */
+        .skills-list,
+        .interest-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 7px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* CERTIFICATES AND EXPERIENCE */
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        /* FOOTER */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* TABLET RESPONSIVE */
+        @media screen and (max-width: 768px) {
+
+            nav {
+                gap: 8px 15px;
+                padding: 13px 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            section {
+                padding: 23px;
+                margin-bottom: 18px;
+            }
+
+            h2 {
+                font-size: 1.35rem;
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media screen and (max-width: 480px) {
+
+            nav {
+                gap: 5px 9px;
+                padding: 10px 5px;
+            }
+
+            nav a {
+                font-size: 11px;
+                padding: 5px 3px;
+            }
+
+            header {
+                padding: 30px 12px;
+            }
+
+            .profile-img {
+                width: 115px;
+                height: 115px;
+            }
+
+            header h1 {
+                font-size: 1.65rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 0 12px;
+                margin: 18px auto;
+            }
+
+            section {
+                padding: 17px;
+                margin-bottom: 16px;
+                border-radius: 8px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                margin-bottom: 15px;
+            }
+
+            .item h3 {
+                font-size: 1rem;
+            }
+
+            .item h4 {
+                font-size: 0.95rem;
+            }
+
+            section p,
+            li {
+                font-size: 0.9rem;
+            }
+
+            .tag {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            footer {
+                padding: 18px 10px;
+                font-size: 0.8rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="project.html">Projects</a>
+        <a href="certificate.html">Certificates</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header id="home">
+
+        <img src="pic.jpg"
+             alt="Vaidehi Jobiraj"
+             class="profile-img">
+
+        <h1>Vaidehi Jobiraj</h1>
+
+        <p>MCA Graduate | Software Developer</p>
+
+    </header>
+
+
+    <div class="container">
+
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am Vaidehi Jobiraj, an MCA graduate from
+                Santhigiri College of Computer Science,
+                Vazhithala. I have a strong interest in
+                software development, backend technologies
+                and problem-solving.
+
+                I enjoy learning new technologies and
+                developing practical software solutions.
+                I am passionate about improving my technical
+                knowledge and building a successful career
+                in the IT industry.
+            </p>
+
+        </section>
+
+
+        <!-- EDUCATION SECTION -->
+        <section id="education">
+
+            <h2>Education</h2>
+
+            <div class="item">
+
+                <h3>Post Graduation</h3>
+
+                <h4>Master of Computer Applications (MCA)</h4>
+
+                <p>
+                    Santhigiri College of Computer Science,
+                    Vazhithala
+                </p>
+
+                <p class="date completed">
+                    Post-Graduation Completed
+                </p>
+
+            </div>
+
+
+            <div class="item">
+
+                <h3>Graduation</h3>
+
+                <h4>Bachelor of Computer Applications (BCA)</h4>
+
+                <p>
+                    Santhigiri College of Computer Science,
+                    Vazhithala
+                </p>
+
+                <p class="date">Year of Completion: 2023</p>
+
+                <p class="date">CGPA: 6.35</p>
+
+            </div>
+
+
+            <div class="item">
+
+                <h3>Higher Secondary Education</h3>
+
+                <p>NSS HSS Manakkad</p>
+
+                <p class="date">Percentage: 75%</p>
+
+                <p class="date">Year of Completion: 2020</p>
+
+            </div>
+
+
+            <div class="item">
+
+                <h3>SSLC</h3>
+
+                <p>St. Sebastian's High School, Thodupuzha</p>
+
+                <p class="date">Percentage: 87%</p>
+
+                <p class="date">Year of Completion: 2018</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+
+            <h2>Academic Projects</h2>
+
+            <div class="item">
+
+                <h3>Mini Project</h3>
+
+                <h4>Home Gadgets</h4>
+
+                <p>
+                    <strong>Technologies: HTML, CSS and MySQL</strong>
+                </p>
+
+                <p>
+                    Home Gadgets is an online smart home
+                    management system that allows users to
+                    control household devices such as lights,
+                    fans, cameras and other appliances through
+                    an internet-based platform.
+                </p>
+
+            </div>
+
+
+            <div class="item">
+
+                <h3>Main Project</h3>
+
+                <h4>Maternity Healthcare System</h4>
+
+                <p>
+                    <strong>
+                        Technologies: Python, Django, HTML,
+                        CSS and MySQL
+                    </strong>
+                </p>
+
+                <p>
+                    An online maternity healthcare system
+                    designed to help pregnant women access
+                    healthcare services. The system allows
+                    patients to book doctor appointments,
+                    access medical records and receive
+                    healthcare guidance through an online
+                    platform.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+
+            <h2>Technical Skills</h2>
+
+            <div class="skills-list">
+
+                <span class="tag">C</span>
+                <span class="tag">Python</span>
+                <span class="tag">C++</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Django</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CERTIFICATES SECTION -->
+        <section id="certificates">
+
+            <h2>Certificates & Publications</h2>
+
+            <h4>Research Publication</h4>
+
+            <ul>
+                <li>
+                    Successfully published a research paper
+                    entitled "Goal Programming" in an
+                    international journal.
+                </li>
+            </ul>
+
+        </section>
+
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience">
+
+            <h2>Experience</h2>
+
+            <div class="item">
+
+                <ul>
+                    <li>
+                        Successfully completed a one-month
+                        internship at NeST Digital Academy.
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERESTS SECTION -->
+        <section id="interests">
+
+            <h2>Interests</h2>
+
+            <div class="interest-list">
+
+                <span class="tag"
+                      style="background: #95a5a6;">
+                    Dancing
+                </span>
+
+                <span class="tag"
+                      style="background: #95a5a6;">
+                    Cooking
+                </span>
+
+                <span class="tag"
+                      style="background: #95a5a6;">
+                    Travelling
+                </span>
+
+                <span class="tag"
+                      style="background: #95a5a6;">
+                    Gardening
+                </span>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            &copy; 2026 Vaidehi Jobiraj. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>

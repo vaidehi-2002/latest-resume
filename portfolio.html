@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websites | Vaidehi Jobiraj</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e67e22;
+            --bg-color: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        html {
+            width: 100%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            background-color: var(--bg-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary-color);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px 20px;
+            width: 100%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0;
+            padding: 8px 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            overflow-wrap: anywhere;
+        }
+
+        header p {
+            color: #555;
+            font-size: 1.1rem;
+            overflow-wrap: anywhere;
+        }
+
+        /* Container & Row Layout */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .cards-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Project Card */
+        .website-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .website-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Image Display Area */
+        .site-image-box {
+            width: 100%;
+            height: 250px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #eee;
+            padding: 15px;
+        }
+
+        .site-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Card Content Area */
+        .site-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .site-name-label {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .site-name-value {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 40px 15px;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            nav { gap: 8px 12px; padding: 12px 8px; }
+            nav a { font-size: 13px; }
+            header { padding: 35px 15px; }
+            header h1 { font-size: 30px; }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav { gap: 5px 10px; padding: 10px 5px; }
+            nav a { font-size: 11px; padding: 6px 3px; }
+            header { padding: 25px 12px; }
+            header h1 { font-size: 24px; }
+            .cards-row { grid-template-columns: 1fr; }
+            footer { padding: 20px 10px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="portfolio.html" style="color: var(--secondary-color);">Projects</a>
+        <a href="certificate.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <!-- <h1>Created Website</h1>
+        <p>A showcase of my custom built application</p> -->
+    </header>
+
+    <!-- Main Container with Cards in One Row -->
+    <div class="container">
+        <div class="cards-row">
+
+            <article class="website-card">
+                <div class="site-image-box">
+                    <img src="santhisoft.png" alt="Santhisoft">
+                </div>
+                <div class="site-details">
+                    <p class="site-name-label">Name: <span class="site-name-value">Santhisoft Technologies</span></p>
+                </div>
+            </article>
+
+            <!-- <article class="website-card">
+                <div class="site-image-box">
+                    <img src="santhisoft.png" alt="Santhisoft">
+                </div>
+                <div class="site-details">
+                    <p class="site-name-label">Name: <span class="site-name-value">Santhisoft Technologies</span></p>
+                </div>
+            </article> -->
+
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Vaidehi Jobiraj | Web Developer</p>
+    </footer>
+
+</body>
+</html>
